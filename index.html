@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curhat Colongan Online, Anonim">
+  <meta name="keywords" content="curhat, curcol, curhat colongan, anonim, SEO, meta tags, title">
+  <meta name="author" content="curcol anonim">
+  <title>Curcol Anonim</title>
+<style>
+  p {
+	font-family: Helvetica, Arial, sans-serif;
+	margin : 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>Curcol Anonim</h1>
+  <p>Curhat colongan adalah istilah yang berasal dari bahasa Indonesia, terdiri dari dua kata yaitu "curhat" dan "colongan". Kata "curhat" merupakan kependekan dari "curahan hati" yang artinya adalah ungkapan atau pengakuan mengenai perasaan atau pikiran seseorang terhadap suatu peristiwa atau masalah yang sedang dihadapi. Sedangkan kata "colongan" merujuk pada tempat yang tidak terduga atau tidak terencana, yang digunakan untuk melakukan curhat. Jadi, curhat colongan merujuk pada ungkapan perasaan atau pikiran yang dilakukan di tempat yang tidak terduga atau terencana.</p>
+
+<!-- HTML code -->
+<div align="center">
+  <button id="prevBtn">-</button>
+  <input type="text" id="pageInput" value="1060">
+  <button id="nextBtn">+</button>
+</div>
+<br/>
+  
+<div id="myDivOut"></div>
+<div id="myDivOut2"></div>  
+
+<p>Curhat colongan merupakan bentuk komunikasi verbal yang seringkali dilakukan oleh orang-orang dalam kehidupan sehari-hari, terutama di Indonesia. Bentuk komunikasi ini biasanya dilakukan ketika seseorang merasa terbebani dengan masalah atau situasi tertentu dan merasa perlu untuk membagikan beban tersebut kepada orang lain. Hal ini dilakukan dengan harapan dapat mendapatkan dukungan atau saran dari orang yang mendengarkan curhatannya.</p>
+
+<p>Tempat-tempat yang sering digunakan untuk curhat colongan biasanya adalah warung kopi, kantin, atau tempat-tempat umum lainnya. Hal ini karena tempat-tempat tersebut terkadang memberikan kesempatan bagi orang untuk bertemu dengan teman-teman atau orang yang dikenal, dan terlibat dalam percakapan yang informal. Selain itu, curhat colongan juga sering dilakukan di tempat kerja atau di rumah, tergantung pada lingkungan dan kebiasaan masyarakat yang ada di sekitar seseorang.</p>
+
+<!--<script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-discussion="curcolanonim/1060" data-comments-limit="50" data-colorful="1" data-color="29B127" data-dark-color="72E350"></script>-->
+<script type="text/javascript">
+function showScript(page){
+	// Create the script element
+	const script = document.createElement('script');
+	script.setAttribute('src', 'https://telegram.org/js/telegram-widget.js?21');
+	script.setAttribute('data-telegram-post', 'curcolanonim/'+page);
+	script.setAttribute('data-width', '100%');
+	script.setAttribute('data-color', 'CA9C0E');
+	script.setAttribute('data-dark-color', 'F0B138');
+
+	// Get the div element where you want to append the script
+	const div = document.getElementById('myDivOut');
+	
+	div.innerHTML = '';
+
+	// Append the script element to the div element
+	div.appendChild(script);
+	
+	// Create the script element
+	const script2 = document.createElement('script');
+	script2.setAttribute('src', 'https://telegram.org/js/telegram-widget.js?21');
+	script2.setAttribute('data-telegram-discussion', 'curcolanonim/'+page);
+	script2.setAttribute('data-comments-limit', '50');
+	script2.setAttribute('data-colorful', '1');
+	script2.setAttribute('data-color', '29B127');
+	script2.setAttribute('data-dark-color', '72E350');	
+	
+	const div2 = document.getElementById('myDivOut2');
+	
+	div2.innerHTML = '';
+	
+	div2.appendChild(script2);
+}
+
+// JavaScript code
+const pageInput = document.getElementById('pageInput');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let page = pageInput.value; // initial page value
+
+showScript(page);
+
+// Event listener for the "-" button
+prevBtn.addEventListener('click', () => {
+  page = pageInput.value; 
+  if (page > 0) { // only decrease if page value is greater than 0
+    page--;
+    pageInput.value = page; // update input field with new page value
+	showScript(page);
+  }
+});
+
+// Event listener for the "+" button
+nextBtn.addEventListener('click', () => {
+  page = pageInput.value; 
+  
+  page++;
+  pageInput.value = page; // update input field with new page value
+  showScript(page);
+});
+
+
+pageInput.addEventListener('change', () => {
+  showScript(pageInput.value);
+});
+
+</script>
+
+</body>
+</html>
